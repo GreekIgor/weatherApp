@@ -32,9 +32,10 @@
 
       <com.google.android.material.textview.MaterialTextView
           android:id="@+id/main_city_tv"
+          style="@style/MyTextStyle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-         android:textSize="14sp"
+         android:textSize="18sp"
          android:textStyle="bold"
          tools:text="Moskow"
          app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +46,197 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
          android:textStyle="normal"
+          style="@style/MyTextStyle"
          android:textSize="10sp"
          tools:text="14.10.2022"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintEnd_toEndOf="parent"
          app:layout_constraintTop_toBottomOf="@id/main_city_tv"/>
+
+      <androidx.constraintlayout.widget.Guideline
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:id="@+id/guideline"
+          android:orientation="horizontal"
+         app:layout_constraintGuide_percent="0.45"/>
+      <ImageView
+          android:id="@+id/main_weather_image"
+          android:layout_width="150dp"
+          android:layout_height="150dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintBottom_toTopOf="@id/guideline"
+          android:src="@mipmap/raincloud3x"
+          />
+
+      <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          app:layout_constraintEnd_toStartOf="@id/main_weather_image"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/main_weather_image">
+
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:src="@drawable/ic_nounwind"
+
+             />
+
+         <com.google.android.material.textview.MaterialTextView
+             android:layout_width="wrap_content"
+             style="@style/MyTextStyle"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginStart="8dp"
+             android:textSize="20sp"
+             tools:text="Clear SKy" />
+
+      </LinearLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/materialTextView"
+          style="@style/MyTextStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="98sp"
+          app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+          app:layout_constraintStart_toStartOf="@+id/linearLayout"
+          app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+          tools:text="25°" />
+
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+          app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+          app:layout_constraintStart_toStartOf="@+id/materialTextView">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/MyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min"
+                android:includeFontPadding="false"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:includeFontPadding="false"
+                android:textSize="12sp" />
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:background="@color/black"
+             android:minWidth="1dp"
+             android:layout_marginStart="4dp"
+             android:layout_marginEnd="4dp"
+             android:orientation="vertical"/>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/MyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min"
+                android:includeFontPadding="false"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:includeFontPadding="false"
+                android:textSize="12sp" />
+
+         </LinearLayout>
+
+
+
+      </LinearLayout>
+
+
+
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/materialTextView"
+          app:layout_constraintTop_toTopOf="@+id/guideline"
+          app:layout_constraintVertical_bias="0.25"
+          >
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_local_fire_department_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_marginTop="8dp"
+             android:layout_marginBottom="8dp"
+             >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_science_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_self_improvement_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+         </LinearLayout>
+      </LinearLayout>
+
 
    </androidx.constraintlayout.widget.ConstraintLayout>
 
