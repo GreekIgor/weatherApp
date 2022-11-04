@@ -47,6 +47,7 @@
           android:layout_height="wrap_content"
          android:textStyle="normal"
           style="@style/MyTextStyle"
+          android:id="@+id/maindatetv"
          android:textSize="10sp"
          tools:text="14.10.2022"
          app:layout_constraintStart_toStartOf="parent"
@@ -91,12 +92,13 @@
              android:layout_gravity="center"
              android:layout_marginStart="8dp"
              android:textSize="20sp"
+             android:id="@+id/main_whetarname"
              tools:text="Clear SKy" />
 
       </LinearLayout>
 
       <com.google.android.material.textview.MaterialTextView
-          android:id="@+id/materialTextView"
+          android:id="@+id/MainTempTxt"
           style="@style/MyTextStyle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -108,43 +110,13 @@
 
 
       <LinearLayout
+          android:id="@+id/linearLayout3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
-          app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
-          app:layout_constraintEnd_toEndOf="@+id/materialTextView"
-          app:layout_constraintStart_toStartOf="@+id/materialTextView">
-
-         <LinearLayout
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <com.google.android.material.textview.MaterialTextView
-                style="@style/MyTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/min"
-                android:includeFontPadding="false"
-                android:textSize="12sp" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:includeFontPadding="false"
-                android:textSize="12sp" />
-
-         </LinearLayout>
-
-         <LinearLayout
-             android:layout_width="wrap_content"
-             android:layout_height="match_parent"
-             android:background="@color/black"
-             android:minWidth="1dp"
-             android:layout_marginStart="4dp"
-             android:layout_marginEnd="4dp"
-             android:orientation="vertical"/>
+          app:layout_constraintBottom_toBottomOf="@+id/MainTempTxt"
+          app:layout_constraintEnd_toEndOf="@+id/MainTempTxt"
+          app:layout_constraintStart_toStartOf="@+id/MainTempTxt">
 
          <LinearLayout
              android:layout_width="wrap_content"
@@ -155,35 +127,63 @@
                 style="@style/MyTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/min"
                 android:includeFontPadding="false"
+                android:text="@string/min"
                 android:textSize="12sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25"
                 android:includeFontPadding="false"
+                android:text="10"
+                android:textSize="12sp" />
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginStart="4dp"
+             android:layout_marginEnd="4dp"
+             android:background="@color/black"
+             android:minWidth="1dp"
+             android:orientation="vertical" />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/MyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/min"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="25"
                 android:textSize="12sp" />
 
          </LinearLayout>
 
 
-
       </LinearLayout>
 
 
-
-
       <LinearLayout
+          android:id="@+id/linearLayout2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:orientation="vertical"
           app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintStart_toStartOf="@+id/materialTextView"
+          app:layout_constraintStart_toStartOf="@+id/MainTempTxt"
           app:layout_constraintTop_toTopOf="@+id/guideline"
-          app:layout_constraintVertical_bias="0.25"
-          >
+          app:layout_constraintVertical_bias="0.25">
 
          <LinearLayout
              android:layout_width="wrap_content"
@@ -191,8 +191,7 @@
              android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                style="@style/AdditionalIconStyle"
                 android:src="@drawable/ic_baseline_local_fire_department_24" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -204,14 +203,12 @@
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:orientation="horizontal"
              android:layout_marginTop="8dp"
              android:layout_marginBottom="8dp"
-             >
+             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                style="@style/AdditionalIconStyle"
                 android:src="@drawable/ic_baseline_science_24" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -226,8 +223,47 @@
              android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                style="@style/AdditionalIconStyle"
+                android:src="@drawable/ic_baseline_self_improvement_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+         </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="top"
+          android:orientation="vertical"
+
+          app:layout_constraintStart_toStartOf="@+id/main_weather_image"
+          app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AdditionalIconStyle"
+                android:src="@drawable/ic_baseline_local_fire_department_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test" />
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+            <ImageView
+                style="@style/AdditionalIconStyle"
                 android:src="@drawable/ic_baseline_self_improvement_24" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -239,5 +275,54 @@
 
 
    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   <androidx.coordinatorlayout.widget.CoordinatorLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:id="@+id/main_botoom_sheets"
+       android:background="@drawable/bg_main_botom_sheets"
+      android:elevation="8dp"
+      app:behavior_hideable="false"
+      app:behavior_peekHeight="160dp"
+      app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+      android:layout_gravity="end">
+
+      <LinearLayout
+          android:id="@+id/main_sheets_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:elevation="16dp"
+         android:orientation="vertical"
+         >
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:background="@drawable/bg_main_bottom_sheets_swaiper"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/main_howerly_list"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_marginBottom="8dp"
+             tools:layout_height="80dp"
+             />
+
+         <LinearLayout
+             style="@style/DividerStyle"
+             android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+
+      </LinearLayout>
+
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
