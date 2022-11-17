@@ -15,5 +15,10 @@ class MainActivity : AppCompatActivity() {
         maindatetv.text = "24 yuli 2022"
         main_weather_image.setImageResource(R.mipmap.raincloud4x)
 
+
     }
+
+
+
+
 }

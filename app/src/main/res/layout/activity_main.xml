@@ -321,6 +321,15 @@
             android:layout_marginEnd="8dp"/>
 
 
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/main_daily_list"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:overScrollMode="never"
+             tools:layout_height="100dp"
+             />
+
+
       </LinearLayout>
 
    </androidx.coordinatorlayout.widget.CoordinatorLayout>
